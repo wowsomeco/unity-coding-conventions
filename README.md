@@ -1,4 +1,6 @@
-# C# Coding Standards and Naming Conventions for Unity
+# C# Coding Standards and Naming Conventions for Wowsome Unity projects
+
+## Naming Conventions
 
 #### 1. Do use PascalCasing for class names and method names:
 
@@ -97,7 +99,7 @@ public interface IGroupable {
 
 ***Why: consistent with the Microsoft's .NET Framework.***
 
-#### 8. Do use PascalCasing for Enum
+#### 8. Do use PascalCasing for Enum. Do not use an "Enum" suffix in enum type names
 
 ```csharp 
 // Correct
@@ -112,7 +114,7 @@ public enum Color
 }
 
 // Don't
-public enum Color
+public enum ColorEnum
 {
   RED,
   GREEN,
