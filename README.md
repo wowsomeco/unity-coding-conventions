@@ -125,4 +125,32 @@ public enum Color
 
 ***Why: consistent with the Microsoft's .NET Framework. Caps grab too much attention.***
 
-More Coming Soon...
+#### 9. Do declare all static variables at the very top of a class, followed by accessors, member variables, and lastly the methods respectively. Separate each of them with new line.
+
+```csharp 
+public class MenuController {
+  public static string ScreenMain = "main";
+  public static string ScreenSelectLevel = "select_level";
+  
+  public string SelectedScreen { get; set; }     
+  public bool IsTransitioning { get; private set; }  
+  
+  public bool shouldAnimate;
+  
+  bool _counter = 0;
+  
+  public void PublicMethod() {
+    // ...
+  }
+  
+  protected void ProtectedMethod() {
+    // ...
+  }
+  
+  private void PrivateMethod() {
+    // ...
+  }
+}
+```
+
+***Why: generally accepted practice that prevents the need to hunt for variable declarations e.g. public stuffs reside at the very top since those are normally the things that another programmers are interested in the most***
