@@ -1,4 +1,4 @@
-# C# Coding Standards and Naming Conventions for Wowsome Unity projects
+# C# Coding Conventions for Wowsome Unity projects
 
 ## Naming Conventions
 
@@ -156,3 +156,34 @@ public class MenuController {
 ```
 
 ***Why: generally accepted practice that prevents the need to hunt for variable declarations e.g. public stuffs reside at the very top since those are normally the things that another programmers are interested in the most***
+
+## Formatting
+
+#### 1. Do not put open-braces on a new line for everything i.e. class, interface, methods, accessors, etc.
+
+```csharp 
+// Correct
+public class GameController : IGameController {
+  public interface IGameObject {
+    void InitGameObject(IGameController controller);
+  }
+
+  public bool IsGameOver {
+    get {
+      return _isGameOver
+    }
+    set {
+      _isGameOver = value;
+      // do something else here ...
+    }
+  }
+  
+  private bool _isGameOver = false;
+  
+  public void SomeMethod() {
+    // ...
+  }
+}
+```
+
+***Why: Doing so will save up more vertical lines for you which results in better readability esp. for other team members that read your code for the first time and need to scroll up and down intensively.***
