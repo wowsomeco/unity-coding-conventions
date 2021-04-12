@@ -97,4 +97,32 @@ public interface IGroupable {
 
 ***Why: consistent with the Microsoft's .NET Framework.***
 
+#### 8. Do use PascalCasing for Enum
+
+```csharp 
+// Correct
+public enum Color
+{
+  Red,
+  Green,
+  Blue,
+  Yellow,
+  Magenta,
+  Cyan
+}
+
+// Don't
+public enum Color
+{
+  RED,
+  GREEN,
+  BLUE,
+  YELLOW,
+  MAGENTA,
+  CYAN
+}
+```
+
+***Why: consistent with the Microsoft's .NET Framework. Caps grab too much attention.***
+
 More Coming Soon...
