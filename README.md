@@ -103,8 +103,7 @@ public interface IGroupable {
 
 ```csharp 
 // Correct
-public enum Color
-{
+public enum Color {
   Red,
   Green,
   Blue,
@@ -114,8 +113,7 @@ public enum Color
 }
 
 // Don't
-public enum ColorEnum
-{
+public enum ColorEnum {
   RED,
   GREEN,
   BLUE,
