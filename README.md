@@ -184,6 +184,35 @@ public class GameController : IGameController {
     // ...
   }
 }
+
+// Avoid
+public class GameController : IGameController 
+{
+  public interface IGameObject 
+  {
+    void InitGameObject(IGameController controller);
+  }
+
+  public bool IsGameOver 
+  {
+    get 
+    {
+      return _isGameOver;
+    }
+    set 
+    {
+      _isGameOver = value;
+      // do something else here ...
+    }
+  }
+  
+  private bool _isGameOver = false;
+  
+  public void SomeMethod() 
+  {
+    // ...
+  }
+}
 ```
 
-***Why: Doing so will save up more vertical lines for you which results in better readability esp. for other team members that read your code for the first time and need to scroll up and down intensively.***
+***Why: This might be debatable since the .NET standard is the open-braces-on-a-new-line one. However, doing so will waste more vertical lines for you which results in less readability esp. for other team members that read your code for the first time and need to scroll up and down frequently.***
