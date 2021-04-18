@@ -215,4 +215,4 @@ public class GameController : IGameController
 }
 ```
 
-***Why: This might be debatable since the .NET standard is the open-braces-on-a-new-line one. However, doing so will waste more vertical lines for you which results in less readability esp. for other team members that read your code for the first time and need to scroll up and down frequently.***
+***Why: This might be debatable since the .NET standard is the open-braces-on-a-new-line one. However, doing so will waste more vertical lines for you which results in more efforts for the other team members that need to read your code for the first time e.g. imagine if they need to scroll up and down frequently where your file contains more than 500 lines, etc.***
