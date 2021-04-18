@@ -170,7 +170,7 @@ public class GameController : IGameController {
 
   public bool IsGameOver {
     get {
-      return _isGameOver
+      return _isGameOver;
     }
     set {
       _isGameOver = value;
